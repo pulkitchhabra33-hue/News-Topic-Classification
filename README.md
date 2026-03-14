@@ -80,7 +80,7 @@ News Topic Classification
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/pulkitchhabra33-hue/news-topic-classifier.git
+git clone https://github.com/pulkitchhabra33-hue/News-Topic-Classification
 cd news-topic-classifier
 ```
 
