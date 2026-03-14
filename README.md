@@ -1,2 +1,121 @@
-# News Topic Classification
-## Conclusion  In this project, we built an end-to-end **News Topic Classification system** using Natural Language Processing and Deep Learning.  The goal was to automatically classify news headlines into four categories: **World, Sports, Business, and Sci/Tech**.  ### Key Steps in the Project  1. **Data Preprocessing**    - Cleaned and prepared the text dataset    - Tokenized headlines using Keras Tokenizer    - Converted text into integer sequences    - Applied padding to maintain consistent input length  2. **Model Development**    - Built a deep learning model using:      - **Embedding layer** for word representations      - **Bidirectional LSTM layers** to capture contextual information      - **Dropout layers** to reduce overfitting      - **Dense layers with Softmax activation** for classification  3. **Training and Evaluation**    - The model was trained on the news dataset    - Achieved approximately **85% test accuracy**    - Demonstrated good performance in classifying short news headlines  4. **Deployment**    - The trained model and tokenizer were saved    - A **Streamlit web application** was created to allow users to enter news headlines and receive predicted categories  ### Final Outcome  The project successfully demonstrates how **Deep Learning and NLP techniques can be used to build an automated news classification system**.  This project highlights the complete machine learning workflow: - Data preprocessing - Model training - Model evaluation - Model deployment with a user interface  Future improvements could include: - Using **pre-trained word embeddings (GloVe, Word2Vec)** - Training on a **larger news dataset** - Using **Transformer-based models like BERT** for higher accuracy.
+# News Topic Classification using NLP and Deep Learning
+
+This project builds an **automated News Topic Classification system** using **Natural Language Processing (NLP)** and **Deep Learning**.
+
+The model predicts the category of a news headline among the following topics:
+
+- 🌍 World
+- ⚽ Sports
+- 💰 Business
+- 🤖 Sci/Tech
+
+The system is deployed using **Streamlit**, allowing users to interactively classify news headlines.
+
+---
+
+# Project Overview
+
+News websites generate thousands of articles daily. Automatically categorizing news articles helps organize content and improve information retrieval.
+
+In this project, we build a **Deep Learning-based classifier** that learns patterns from news headlines and predicts the correct category.
+
+---
+
+# Model Architecture
+
+The classification model uses the following architecture:
+
+Embedding Layer  
+→ Bidirectional LSTM  
+→ Dropout  
+→ Bidirectional LSTM  
+→ Dense (ReLU)  
+→ Dense (Softmax)
+
+### Explanation
+
+- **Embedding Layer** converts words into dense vectors.
+- **Bidirectional LSTM** captures context from both directions in text.
+- **Dropout** helps reduce overfitting.
+- **Dense + Softmax** outputs the final class probabilities.
+
+---
+
+# Technologies Used
+
+- Python
+- TensorFlow / Keras
+- NumPy
+- Streamlit
+- Natural Language Processing
+
+---
+
+# Model Performance
+
+| Metric | Value |
+|------|------|
+| Test Accuracy | ~85% |
+
+The model performs well for short news headlines and general news topics.
+
+---
+
+# Project Structure
+
+News Topic Classification
+│
+├── app.py
+├── news_classifier.h5
+├── tokenizer.pkl
+├── news_topic_classification.ipynb
+├── requirements.txt
+└── data/
+
+
+---
+
+# How to Run the Project
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/pulkitchhabra33-hue/news-topic-classifier.git
+cd news-topic-classifier
+```
+
+2️⃣ Install dependencies
+pip install -r requirements.txt
+3️⃣ Run the Streamlit app
+streamlit run app.py
+4️⃣ Enter a news headline
+
+Example:
+
+NASA launches new satellite to study climate change
+
+Prediction:
+
+Sci/Tech
+Example Predictions
+Headline	Prediction
+NASA discovers new exoplanet	Sci/Tech
+Apple stock rises after earnings report	Business
+Barcelona wins Champions League final	Sports
+Russia launches missile strike on Ukraine	World
+Future Improvements
+
+Possible improvements include:
+
+Using pre-trained embeddings (GloVe, Word2Vec)
+
+Training with larger datasets
+
+Implementing Transformer-based models like BERT
+
+Deploying the model with Docker or cloud services
+
+# Author
+
+Pulkit Chhabra
+Aspiring Data Scientist passionate about Machine Learning, NLP, and AI-driven applications.
